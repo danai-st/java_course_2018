@@ -16,20 +16,28 @@ public class MainSorting {
 		employees.add(new Employee(1, "Somkiat", 200));
 		employees.add(new Employee(2, "Pui", 100));
 		employees.add(new Employee(3, "Abdul", 500));
+		employees.add(new Employee(4, "Up1", 150));
+		
 		System.out.println("======= Original data=========");
 		employees.forEach(System.out::println);
 	
 		// Sorting with comparator
-		Collections.sort(employees, new Comparator<Employee>() 	{
-
-			@Override
-			public int compare(Employee e1, Employee e2) {
-				//return e1.getName().compareTo(e2.getName());
-				return(int)(e2.getSalary() - e1.getSalary());
-			}
-		} );
-		System.out.println("======= Sort by salary =========");
+		
+//		Collections.sort(employees, new Comparator<Employee>() 	{
+//
+//			@Override
+//			public int compare(Employee e1, Employee e2) {
+//				return e1.getName().compareTo(e2.getName());
+//				//return(int)(e2.getSalary() - e1.getSalary());
+//			}
+//		} );
+		
+		Comparator<Employee> withLambda =
+				(Employee e1, Employee e2) ->
+					(int)(e2.getSalary() - e1.getSalary());
+		Collections.sort(employees,  withLambda);
+		
+		System.out.println("======= Sort by name =========");
 		employees.forEach(System.out::println);
 	}
 }
-
