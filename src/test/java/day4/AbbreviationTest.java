@@ -42,5 +42,6 @@ public class AbbreviationTest {
 		String result = p.of("united states of america");
 		assertEquals("USA", result);
 	}
-
+	
+	
 }
