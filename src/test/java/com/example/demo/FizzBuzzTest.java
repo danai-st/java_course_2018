@@ -2,7 +2,7 @@ package com.example.demo;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class FizzBuzzTest {
 
@@ -43,10 +43,10 @@ public class FizzBuzzTest {
 		assertEquals("Fizz", actualResult);
 	}
 	@Test
-	public void say_7_when_input_7() {
+	public void say_KBTG_when_input_7() {
 		FizzBuzz fizzBuzz = new FizzBuzz();
 		String actualResult = fizzBuzz.say(7);
-		assertEquals("7", actualResult);
+		assertEquals("KBTG", actualResult);
 	}
 	@Test
 	public void say_8_when_input_8() {
