@@ -55,5 +55,6 @@ public class MainStream {
                 .collect(Collectors.toList());
         result.forEach(System.out::print);
     }
-
+  
 }
+
